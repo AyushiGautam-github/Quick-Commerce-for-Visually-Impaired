@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <!-- Code for font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Code for linking css file-->
+     <link rel="stylesheet" type="text/css" href="css/style.css"> 
+
+
+
+
+</head>
+<body>
+   <!--header section-->
+   <header class="header"> 
+    <a href="#" class="logo"> <i class="fa fa-shopping-basket" aria-hidden="true"></i> Grocery</a>
+
+
+
+
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#products">Products</a>
+    <a href="#categories">Categories</a>
+    <a href="#review">Review</a>
+    <a href="#blogs">Blogs</a>
+  </nav>
+
+  <div class="icons">
+    <div class="fa fa-bars" id="menu-btn"></div>
+    <div class="fa fa-search" id="search-btn"></div>
+    <div class="fa fa-shopping-cart" id="cart-btn"></div>
+    <div class="fa fa-user" id="login-btn"></div>
+
+  </div>
+
+
+
+  <form class="search-form">
+    <input type="search" id="search-box" placeholder="Search Here...">
+    <label for="search-box" class="fa fa-search"> </label>
+  </form> 
+
+
+  </header>
+
+  <!--banner section-->
+  <section class="home" id="home"> 
+    <div class="content">
+      <h3>Fresh And <span>Organic</span> Product For You</h3>
+      <p>We are here to provide fresh vegies and fruits everyday right at your door step!</p>
+
+      <a href="#" class="shop-btn">Shop Now</a>
+    </div>
+  </section>
+    
+  <!--features section-->
+  <section class="features" id="features">
+    <h1 class="heading">Our <span>Features</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="image/feature-img-1.png" alt="">
+        <h3>Fresh And Organic</h3>
+        <p>Vegies and fruits freshly picked from certified farm</p>
+        <a href="#" class="shop-btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="image/feature-img-2.png" alt="">
+        <h3>Free Delivery</h3>
+        <p>Vegies and fruits freshly picked from certified farm</p>
+        <a href="#" class="shop-btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="image/feature-img-3.png" alt="">
+        <h3>Easy Payments</h3>
+        <p>Vegies and fruits freshly picked from certified farm</p>
+        <a href="#" class="shop-btn">read more</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!--product section-->
+<section class="products" id="products">
+  <h1 class="heading">Best-Selling <span>Products</span></h1>
+
+  <div class="box-container">
+
+      <div class="box" data-name="fresh orange">
+          <img src="image/product-1.png" alt="">
+          <h3>Fresh Orange</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Orange', 230, 'image/product-1.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh onion">
+          <img src="image/product-2.png" alt="">
+          <h3>Fresh Onion</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Onion', 230, 'image/product-2.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh meat">
+          <img src="image/product-3.png" alt="">
+          <h3>Fresh Meat</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Meat', 230, 'image/product-3.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh cabbage">
+          <img src="image/product-4.png" alt="">
+          <h3>Fresh Cabbage</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Cabbage', 230, 'image/product-4.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh potato">
+          <img src="image/product-5.png" alt="">
+          <h3>Fresh Potato</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Potato', 230, 'image/product-5.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh avocado">
+          <img src="image/product-6.png" alt="">
+          <h3>Fresh Avocado</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Avocado', 230, 'image/product-6.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh carrot">
+          <img src="image/product-7.png" alt="">
+          <h3>Fresh Carrot</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Carrot', 230, 'image/product-7.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box" data-name="fresh lemon">
+          <img src="image/product-8.png" alt="">
+          <h3>Fresh Lemon</h3>
+          <div class="Price">Rs. 230/kg-</div>
+          <a href="javascript:void(0)" onclick="addToCart('Fresh Lemon', 230, 'image/product-8.png')" class="shop-btn">Add to cart</a>
+      </div>
+
+  </div>
+</section>
+
+
+
+  <!--categories section-->
+  <section class="categories" id="categories">
+    <h1 class="heading">Our <span>Categories</span></h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="image/cat-1.png" alt="">
+        <h3>Vegetables</h3>
+        <div class="off">Upto 45% off</div>
+        <a href="#" class="shop-btn">Add to cart</a>
+      </div>
+
+    <div class="box">
+        <img src="image/cat-2.png" alt="">
+        <h3>Fresh Fruits</h3>
+        <div class="off">Upto 45% off</div>
+        <a href="#" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box">
+        <img src="image/cat-3.png" alt="">
+        <h3>Dairy Products</h3>
+        <div class="off">Upto 45% off</div>
+        <a href="#" class="shop-btn">Add to cart</a>
+      </div>
+
+      <div class="box">
+        <img src="image/cat-4.png" alt="">
+        <h3>Fresh Meat</h3>
+        <div class="off">Upto 45% off</div>
+        <a href="#" class="shop-btn">Add to cart</a>
+      </div>
+
+    </div>
+    </section>
+
+
+    <!--review section-->
+
+    <section class="review" id="review">
+      <h1 class="heading">Customer's <span>Review</span></h1>
+  
+        <div class="box-container">
+
+          <div class="box">
+            <img src="image/pic-2.png" alt="">
+            <p>My go-to daily store for fresh fruits and vegies.</p>
+            <h3>John Deo</h3>
+          <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+          </div>
+        
+          </div>
+            
+            
+          
+    
+        <div class="box">
+            <img src="image/pic-3.png" alt="">
+            <p>My go-to daily store for fresh fruits and vegies.</p>
+            <h3>John Deo</h3>
+          <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+          </div>
+        
+          </div>
+
+    
+          <div class="box">
+            <img src="image/pic-4.png"" alt="">
+            <p>My go-to daily store for fresh fruits and vegies.</p>
+            <h3>John Deo</h3>
+          <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+          </div>
+        
+          </div>
+
+
+          </div>
+    
+        </div>
+        </section>
+
+
+
+        <!--blogs section-->
+
+    <section class="blogs" id="blogs">
+      <h1 class="heading">Farmer's <span>Blogs</span></h1>
+  
+        <div class="box-container">
+          <div class="box">
+            <img src="image/blog-1.jpg">
+            <div class="content">
+              <div class="icons">
+                <a href="#"><i class="fa fa-user"></i> By User</a>
+                <a href="#"><i class="fa fa-calendar"></i> 1st May, 2021</a>
+              </div>
+              <h3>Fresh & Oraganic Fruits</h3>
+              <p>This blog is written by our 5star farmer Mr. Ramesh</p>
+              <a href="#" class="shop-btn">Read More</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="image/blog-2.jpg">
+            <div class="content">
+              <div class="icons">
+                <a href="#"><i class="fa fa-user"></i> By User</a>
+                <a href="#"><i class="fa fa-calendar"></i> 1st May, 2021</a>
+              </div>
+              <h3>Fresh & Oraganic Fruits</h3>
+              <p>This blog is written by our 5star farmer Mr. Ramesh</p>
+              <a href="#" class="shop-btn">Read More</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="image/blog-3.jpg">
+            <div class="content">
+              <div class="icons">
+                <a href="#"><i class="fa fa-user"></i> By User</a>
+                <a href="#"><i class="fa fa-calendar"></i> 1st May, 2021</a>
+              </div>
+              <h3>Fresh & Oraganic Fruits</h3>
+              <p>This blog is written by our 5star farmer Mr. Ramesh</p>
+              <a href="#" class="shop-btn">Read More</a>
+            </div>
+          </div>
+
+
+          </div>
+
+          <script>
+            function addToCart(name, price, imgSrc) {
+                // Retrieve cart from localStorage or initialize as an empty array
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                // Check if the item already exists in the cart
+                const existingItemIndex = cart.findIndex(item => item.name === name);
+                if (existingItemIndex > -1) {
+                    // If item exists, increase the quantity
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    // If not, add the new item
+                    cart.push({ name, price, imgSrc, quantity: 1 });
+                }
+        
+                // Save updated cart back to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+        
+                // Redirect to cart page
+                window.location.href = 'cart.html';
+            }
+        </script>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"> </script>
+</body>
+</html>

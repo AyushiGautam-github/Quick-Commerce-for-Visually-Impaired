@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        :root {
+            --green: #27ae60;
+            --black: #130f40;
+            --gray: #bdc3c7;
+            --light-gray: #f2f2f2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .total-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--green);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            width: 48%;
+            padding: 15px;
+            background-color: var(--green);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Checkout</h1>
+        
+        <div class="total-amount">
+            Total: Rs. <span id="totalAmount">0.00</span>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="buttons">
+            <button id="returnToCartBtn" onclick="window.location.href='cart.html'">Return to Cart</button>
+            <button id="proceedToPaymentBtn" onclick="window.location.href='payment.html'">Proceed to Payment</button>
+
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the total amount from localStorage and display it
+        document.getElementById('totalAmount').innerText = localStorage.getItem('totalAmount') || '0.00';
+
+        // Function to return to the cart
+        function returnToCart() {
+            window.location.href = 'cart.html';
+        }
+
+        // Function to proceed to the payment page
+        function proceedToPayment() {
+            const name = document.getElementById('name').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            // Simple validation check
+            if (!name || !address || !phone) {
+                alert('Please fill out all the fields.');
+                return;
+            }
+
+            // Store delivery information in localStorage
+            localStorage.setItem('deliveryName', name);
+            localStorage.setItem('deliveryAddress', address);
+            localStorage.setItem('deliveryPhone', phone);
+
+            // Redirect to payment page
+            window.location.href = 'payment.html';
+        }
+    </script>
+
+<script src="js/checkoutjs.js"></script>
+
+
+</body>
+</html>
